@@ -7,7 +7,7 @@ sudo reboot now
 
 nano /etc/sysctl.conf
 
-Hashtag entfernen bei "net.ipv4.ip_forward = 1"
+*Hashtag entfernen bei "net.ipv4.ip_forward = 1"*
 
 sudo reboot now
 
@@ -20,4 +20,4 @@ apt-get install iptables-persistent -y
 # Client
 nano /etc/ssh/sshd_config
 
-Hashtag entfernen -> "PermitRootLogin yes"
+*Hashtag entfernen -> "PermitRootLogin yes"*
