@@ -11,9 +11,9 @@
   
 # X as a Service (Pyramide: Unten nach Oben)
 - IaaS -> Infrastructure as a Service
- - Onlinespeicherplatz
- - Wird z.B. von Amazon Web Services angeboten
- - Kostenminderung
+  - Onlinespeicherplatz
+  - Wird z.B. von Amazon Web Services angeboten
+  - Kostenminderung
 
 - PaaS -> Platform as a Service
   - Entwicklertools
