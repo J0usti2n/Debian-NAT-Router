@@ -9,6 +9,28 @@
   - Sicherheitslücken, sowohl Hardware & Software
   -
   
+# Cloud-Arten
+- Public-Cloud
+  - Öffentlicher Zugang
+  - Firma verwaltet Sicherheit der Daten
+  - Geringerer Datenschutz
+  - Solange Verfügbar, wie eine Internetverbindung vorhanden ist
+  - Geringer Administrativer aufwand
+
+- Hybrid-Cloud
+  - Mischform aus Private- und Public-Cloud
+  - Bessere Datensicherheit
+  - Alles Datenschutz bedenkliche ist in der Privaten Cloud, alles weitere in der Public-Cloud
+  - Für den Öffentlichen Teil wird eine Internetverbindung benötigt, für den privaten eine lokale Infrastruktur
+  - Der Administrative Aufwand ist auf den Anwender und die Firma aufgeteilt
+
+- Private-Cloud
+  - Geschlossene Benutzergruppe
+  - Datensicherheit variiert nach Methode (z.B. RAID, Ja, Nein?)
+  - Datenschutz variiert, je nach dem wer in das Netz beitreten kann
+  - Ist solange verfügbar wie die lokale Infrastruktur in takt ist
+  - Administrativer Aufwand ist hoch für den Benutzer, da er alles selbst regeln muss
+  
 # X as a Service (Pyramide: Unten nach Oben)
 - IaaS -> Infrastructure as a Service
   - Onlinespeicherplatz
