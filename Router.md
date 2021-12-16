@@ -1,23 +1,50 @@
 # Router
-apt-get update && apt-get install sudo && apt-get install iptables
+1. Pakete installieren
 
-nano /etc/network/interfaces
+```apt-get update && apt-get install sudo && apt-get install iptables```
 
-sudo reboot now
+2. Netzwerkkonfiguration
 
-nano /etc/sysctl.conf
+```nano /etc/network/interfaces```
+```
+auto enp0s8
+iface enp0s8 inet static
+    address 192.168.10.1
+    network 192.168.10.0
+    broadcast 192.168.10.255
+    dns-nameservers 1.1.1.1 1.0.0.1
+```
+2.1. Neustarten
 
-*Hashtag entfernen bei "net.ipv4.ip_forward = 1"*
+```sudo reboot now```
 
-sudo reboot now
+2.2. IP-Forwarding aktivieren - 
 
-sudo iptables --table nat --append POSTROUTING --out-interface enp0s3 -j MASQUERADE
+```nano /etc/sysctl.conf *Hashtag entfernen```
 
-sudo iptables --append FORWARD --in-interface enp0s8 -j ACCEPT
+``` 
+#net.ipv4.ip_forward = 1 -> net.ipv4.ip_forward = 1
+```
+2.3. Neustarten
 
-apt-get install iptables-persistent -y
+```sudo reboot now```
+
+2.4. Regeln hinzufügen
+
+```sudo iptables --table nat --append POSTROUTING --out-interface enp0s3 -j MASQUERADE```
+
+```sudo iptables --append FORWARD --in-interface enp0s8 -j ACCEPT```
+
+2.5. IPTables speichern
+
+```apt-get install iptables-persistent -y```
+
 
 # Client
-nano /etc/ssh/sshd_config
+3. SSH Root-Anmeldung erlauben (Debian)
 
-*Hashtag entfernen -> "PermitRootLogin yes"*
+```nano /etc/ssh/sshd_config``` 
+-> "PermitRootLogin yes" einfügen
+
+# Windows SSH verbindung zu Root
+```route add 192.168.10.0 MASK 255.255.255.0 192.168.10.1``` -> Syntax: route add <Netz-ID(enp0s8)> MASK <Netzmaske> <Gateway>
