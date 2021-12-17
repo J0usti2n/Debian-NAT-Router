@@ -47,4 +47,4 @@ iface enp0s8 inet static
 -> "PermitRootLogin yes" einfügen
 
 # Windows SSH verbindung zu Root
-```route add 192.168.10.0 MASK 255.255.255.0 192.168.10.1``` -> Syntax: route add <Netz-ID(enp0s8)> MASK <Netzmaske> <Gateway(enp0s3)>
+```route add 192.168.10.0 MASK 255.255.255.0 192.168.1.35``` -> Syntax: route add <Netz-ID(enp0s8)> MASK <Netzmaske> <Gateway(enp0s3)>
