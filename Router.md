@@ -42,6 +42,14 @@ iface enp0s8 inet static
 
 # Client
 3. SSH Root-Anmeldung erlauben (Debian)
+4. ```nano /etc/network/interfaces```
+```
+auto enp0s3
+iface enp0s3 inet static
+    address 192.168.10.10/24
+    gateway 192.168.10.1
+    dns-nameservers 1.1.1.1 1.0.0.1
+```
 
 ```nano /etc/ssh/sshd_config``` 
 -> "PermitRootLogin yes" einfügen
