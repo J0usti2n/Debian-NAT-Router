@@ -18,7 +18,7 @@ iface enp0s8 inet static
 
 ```sudo reboot now```
 
-2.2. IP-Forwarding aktivieren - 
+2.2. IP-Forwarding aktivieren
 
 ```nano /etc/sysctl.conf *Hashtag entfernen```
 
